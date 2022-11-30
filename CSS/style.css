@@ -1,4 +1,4 @@
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"); /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, h1, h2, h3 {
   margin: 0;
   padding: 0;
@@ -24,13 +24,20 @@ html {
 
 img {
   height: auto;
-  max-width: 100%;
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 body {
   margin: 0;
   padding: 0;
   background: #ffffff;
+  font-family: "Roboto", sans-serif;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

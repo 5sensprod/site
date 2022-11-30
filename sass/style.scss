@@ -1,7 +1,10 @@
+@import "libs/fonts.scss";
 @import "libs/reset.scss";
 
 body {
     margin: 0;
     padding: 0;
     background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    color: black;
 }
