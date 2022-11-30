@@ -1,13 +1,132 @@
 <!DOCTYPE html>
-<html lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="fr">
+
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <script src="https://kit.fontawesome.com/993684100f.js" crossorigin="anonymous"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/993684100f.js" crossorigin="anonymous"></script>
 	<title>Ohmyfood</title>
 </head>
+
 <body>
-   <!-- Commentaire--> 
+	<div id="bloc_page">
+
+		<!-- HEADER
+		-->
+
+		<header class="header">
+			<span class="header-logo">
+				ohmyfood
+			</span>
+			<form method="post" action="traitement.php">
+				<i class="fa-solid fa-location-dot form-ico"></i>
+				<input type="search" name="rechercher" class="search" id="rechercher" maxlength="24"
+					placeholder="Paris, Belleville">
+				<input type="submit" value="Rechercher" class="submit">
+			</form>
+			<div class="header__brand">
+				<h1 class="header-tagline">Réservez le menu qui vous convient</h1>
+				<p class="header-underline">Découvrez des restaurants d’exception selectionnés par nos soins.</p>
+			</div>
+
+			<!-- NAVIGATION 
+		 	-->
+
+			<nav class="nav">
+				<ul class="nav-list">
+					<li class="nav-link">
+						<a href="#restaurants">Explorer nos restaurants</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+
+			<!-- SECTION FONCTIONNEMENT 
+		 -->
+
+			<section class="section__steps">
+				<div class="section__heading">
+					<h2 class="section-title">
+						Fonctionnement
+					</h2>
+				</div>
+				<ol class="section__steps-list">
+					<li class="section__steps-link"><a href="#"><i class=""></i>Choisissez un restaurant</a></li>
+					<li class="section__steps-link"><a href="#"><i class=""></i>Composez votre menu</a></li>
+					<li class="section__steps-link section__steps-link--active"><a href="#"><i class=""></i>Dégustez au
+							restaurant</a></li>
+				</ol>
+			</section>
+
+			<!-- SECTION RESTAURANTS 
+		 	-->
+
+			<section id="restaurants" class="section__restaurant section--light">
+				<h2 class="section-title">
+					Restaurants
+				</h2>
+				<div class="section__gallery">
+					<a href="la-palette-du-gout.html">
+						<article class="restaurant__card card--light card--rounded">
+							<div class="restaurant__card-media">
+								<img src="img\jay-wennington-N_Y88TWmGwA-unsplash-min.jpg" alt="La palette du goût">
+							</div>
+							<div class="restaurant__card-desc">
+								<h3 class="restaurant__card-name">La palette du goût</h3>
+								<p class="restaurant__card-district">Ménilmontant</p>
+							</div>				
+						</article>
+					</a>
+						<article class="restaurant__card card--light card--rounded">
+							<div class="restaurant__card-media">
+								<img src="img/stil-u2Lp8tXIcjw-unsplash-min.jpg" alt="La note enchantée">
+							</div>
+							<div class="restaurant__card-desc">
+								<h3 class="restaurant__card-name">La note enchantée</h3>
+								<p class="restaurant__card-district">Charonne</p>
+							</div>
+						</article>
+						<article class="restaurant__card card--light card--rounded">
+							<div class="restaurant__card-media">
+								<img src="img\toa-heftiba-DQKerTsQwi0-unsplash-min.jpg" alt="à la française">
+							</div>
+							<div class="restaurant__card-desc">
+								<h3 class="restaurant__card-name">A la française</h3>
+								<p class="restaurant__card-district">Cité Rouge</p>
+							</div>
+						</article>
+						<article class="restaurant__card card--light card--rounded">
+							<div class="restaurant__card-media">
+								<img src="img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-min.jpg"
+									alt="Le délice des sens">
+							</div>
+							<div class="restaurant__card-desc">
+								<h3 class="restaurant__card-name">Le délice des sens</h3>
+								<p class="restaurant__card-district">Folie-Méricourt</p>
+							</div>
+						</article>					
+				</div>
+			</section>
+		</main>
+
+		<!-- FOOTER 
+		 -->
+
+		<footer class="footer__block">
+			<span class="footer-logo">
+				ohmyfood
+			</span>
+			<ul class="footer__list">
+				<li class="footer-link"><i><a href="#">Proposer un restaurant</a></i></li>
+				<li class="footer-link"><a href="#">Devenir partenaire</a></li>
+				<li class="footer-link"><a href="#">Mentions légales</a></li>
+				<li class="footer-link"><a href="#">Contact</a></li>
+			</ul>
+		</footer>
+	</div>
 </body>
+
 </html>
