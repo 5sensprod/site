@@ -1,5 +1,16 @@
-@import "libs/fonts.scss";
-@import "libs/reset.scss";
+@import "libs/__fonts.scss";
+@import "libs/__reset.scss";
+@import "libs/__header.scss";
+@import "libs/__mixins.scss";
+@import "libs/__variables.scss";
+@import "libs/__form.scss";
+@import "libs/__buttons.scss";
+@import "libs/__animations.scss";
+
+html {
+	scroll-behavior: smooth;
+}
+
 
 body {
     margin: 0;
