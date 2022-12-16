@@ -1,0 +1,80 @@
+@import "__animations.scss";
+
+
+//   BOUTON
+@mixin button {
+    display: inline-block;
+    padding: 0.9em 1.5em;
+    cursor: pointer;
+  }
+
+  .button {
+    @include button;
+
+    // NAVIGATION ACCUEIL
+    &--nav {
+        border: none;
+        font-weight: 500;
+        color: #fff;
+        background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
+        @include rounded-border(25px);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.2s ease;      
+    }
+
+    // &--nav:hover {
+    //     }
+
+    // BOUTONS ETAPES
+
+    &--steps {
+        @include rounded-border(20px);
+        width: 336px;
+        font-weight: 500;
+        background: #F8F8F8;
+        box-shadow: 5px 12px 12px -2px rgba(154, 146, 165, 0.25);
+        transition: all 0.2s linear;
+        display: inline-flex;
+        align-items: center;
+        gap: 29px;
+        margin-left: -5px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+
+        &::before {
+            content:'';
+            width: 1.6em;
+            height: 1.6em;
+            margin-left: -35px;
+            border-radius: 50%;
+            background-color: $primary-color;
+            transition: all 0.2s linear;
+        }
+    }
+    
+    &--steps:hover {
+        @include background-transition;
+        box-shadow: 0px 8px 8px -4px rgba(154, 146, 165, 0.90);  
+    }
+    &--steps:hover::before  {
+        animation: anticipation-scale 0.2s linear;
+    }  
+
+    &--steps i {
+        font-size: 1.1em;
+        color: #7E7E7E;
+        transition: all 0.3s ease;
+    }
+    
+    &--steps:hover i {
+        color: #9356DC;
+    }
+
+    // LE BOUTON COMMANDER
+    &--order {
+        margin-top: 40px;
+        @extend .button--nav;
+        padding: 1em 3.8em;
+
+    }
+}

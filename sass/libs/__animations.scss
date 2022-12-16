@@ -1,0 +1,33 @@
+//   ANIMATION BACKGROUND BOUTON
+
+@mixin background-transition {
+    transition: background-color 0.5s linear;
+  
+    &:hover {
+        background-color: #F8F8F8;
+      background-color: #9356DC;
+    //   convertir en rgba #9356DC
+    background-color: rgba(147, 86, 220, .2);
+    }
+  }
+
+// BULLE DES BOUTONS ETAPES
+
+  @keyframes anticipation-scale{
+    0%{
+      transform: scale(1);
+    }
+    30%{
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(0);
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+      }
+  }
