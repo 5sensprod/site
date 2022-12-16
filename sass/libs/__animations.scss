@@ -31,3 +31,71 @@
         transform: scale(1);
       }
   }
+// Coeur qui se remplit
+.icon-heart {
+    
+    fill: transparent;
+    stroke-width: 30;
+    /* cursor: pointer; */
+    position: relative;
+    transition: all .2ms ease-in-out;
+  }
+  
+  .icon-heart svg {
+    overflow: visible;
+    width: 1.2rem;
+  }
+  
+  .icon-heart path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+  
+  .icon-heart .heart-background {
+    position: absolute;
+    stroke: red;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+
+  .heart-main {
+    stroke: rgb(132, 132, 132);
+  }
+
+  .heart-main:hover{
+    stroke: red;
+  }
+
+  .heart-main:hover path {
+    /* animation: fade-animation .3s ease-in-out forwards; */
+    animation: stroke-animation .5s cubic-bezier(.01,.88,.97,.13) forwards;
+
+    @keyframes stroke-animation {
+        0% {
+          stroke: red;
+          stroke-dashoffset: 0;
+        }
+        30% {
+          stroke-dashoffset: 1550;
+        }
+        60% {
+          stroke-dashoffset: 3100;
+          fill: transparent;
+          transform: scale(1);
+        }
+        80% {
+          fill: red;
+          transform: scale(1.1);
+        }
+        90% {
+          transform: scale(1);
+        }
+        100% {
+          stroke-dashoffset: 3100;
+          fill: red;
+        }
+      }
+  }

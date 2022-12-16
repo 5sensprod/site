@@ -1,0 +1,142 @@
+// / SECTIONS
+.container {
+    width:auto;
+    background: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 65px;
+    margin:0 auto;
+  }
+
+.section {
+
+    &--steps {
+        padding-bottom: 56px;
+    }
+
+    &--page{
+        padding-bottom: 50px;
+    }
+
+
+    &__header {}
+
+    &__header-title {
+        padding-top: 49px;
+        padding-left: 49px;
+    }
+
+    &--restaurant {
+        background-color: #F7F7F7;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    &--page {
+        background-color: #F7F7F7;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin-top: -38px;
+        // margin: auto;
+        // gap: 39px;
+        @include rounded-border-top(38px);
+    }
+
+    &--page .section__header {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        gap: 33px;
+
+    }
+
+    &--page .section__header-title {
+        position: relative;
+        padding-left: 13px;
+        font-family: $logo-font;
+        font-size: 28px;
+    }
+
+     &--menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--menu .section__header-title {
+        white-space: nowrap;
+        display: inline-block;
+        width: 40px;
+        font-family: unset;
+        font-weight: 400;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 0 0 8px 0;
+        margin-top: 0;
+        // margin-left: 16px;
+        margin-bottom: 36px;
+        border-bottom: solid 4px $tertiary-color;
+
+    }
+}
+
+// SECTION STEPS
+.section__steps-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+    margin: 10px;
+    list-style: none;
+    counter-reset: li;
+
+    &-item {
+        font-weight: 500;
+        display: flex;
+        align-items: baseline;
+        width: 336px;
+        counter-increment: li;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        // La numérotation
+
+        &::before {
+            content: counter(li);
+            font-weight: 700;
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+            display: inline-flex;
+            z-index: 1;
+        }
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 67px;
+    gap: 18px;
+    
+    // Gouttière entre les sections de menu pour les pages
+    &--section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+    }
+
+    &--menu {
+        padding: 0;
+        gap: 14px;
+        // margin-bottom: 40px;
+    }
+}
+
