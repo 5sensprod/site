@@ -11,11 +11,11 @@
   }
 
 //   Pour chrome et safari, personnalisations de la scrollbar
-  ::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    background: transparent;
-}
+//   ::-webkit-scrollbar {
+//     width: 0;
+//     height: 0;
+//     background: transparent;
+// }
 
 // Cache le débordement de l'élément au début de l'animation  sur le body 
 @keyframes overflow-hidden {

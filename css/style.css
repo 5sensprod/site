@@ -569,12 +569,6 @@ a {
   animation-iteration-count: 1;
 }
 
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  background: transparent;
-}
-
 @keyframes overflow-hidden {
   0% {
     overflow: hidden;
