@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"); /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, h1, h2, h3 {
   margin: 0;
@@ -562,6 +563,134 @@ a {
   height: 255px;
 }
 
+#body {
+  animation: overflow-hidden 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+@keyframes overflow-hidden {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: auto;
+  }
+}
+.spinner--primary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 10px solid #9356DC;
+  width: 20px;
+  height: 20px;
+  border-top: 10px solid rgb(255, 255, 255);
+  animation: spin 0.5s linear infinite;
+  background-color: #9356DC;
+}
+
+.spinner--secondary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 10px solid #9356DC;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  animation: spin 0.3s linear infinite;
+  background: linear-gradient(90deg, #FF79DA 0%, #FF79DA 50%, #9356DC 100%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: #101010;
+  opacity: 1;
+  /* Affichage du loader avec une animation de fondu en sortie,
+  démarrant au bout de 2 secondes */
+  animation: fade-out 0.3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  99% {
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
+.logo-fill-color {
+  position: absolute;
+  padding-left: 18px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  display: flex;
+  margin: auto;
+  color: transparent;
+  width: fit-content;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.5rem;
+  width: 135px;
+  height: auto;
+}
+
+.logo-fill-color::before {
+  content: "ohmyfood";
+  border-radius: 1em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-color: #ffffff;
+  animation: fill-color 3s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgba(240, 228, 241, 0.137254902);
+}
+
+@keyframes fill-color {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 40%;
+  }
+  75% {
+    width: 60%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;
