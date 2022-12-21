@@ -1,0 +1,31 @@
+//   FORMULAIRE
+
+.header__search {
+
+    &_form {
+        // background-color: $grey-dark;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &_input {
+        @include background-color-gray(medium);
+        border: none;
+        font-size: 16px;
+        font-weight: 500;
+        box-shadow: unset;
+        width: 124px;
+        text-align: center;
+    }
+
+    &_icon {
+        font-size: 18px;
+    }
+}
+
+
+
+

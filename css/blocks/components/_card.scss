@@ -1,0 +1,83 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+
+$card-width--restaurant: rem(336);
+$card-width--menu: rem(350);
+$card-heigth--restaurant: rem(250);
+
+.card {
+    
+    position: relative;
+    max-width: $card-width--restaurant;
+    width: 100%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+
+    background: white;
+    @include border-radius(medium);
+
+    &__content {
+        padding: 5%;
+    }
+
+    img {
+        @include border-radius(medium-top);
+        height: rem(172);
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: rem(18);
+        font-weight: 900;
+        margin-bottom: rem(4);
+        font-size: rem(17);
+        letter-spacing: 0.03em;
+
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: rem(17);
+        letter-spacing: 0.01em;
+
+    }
+
+    &__icon {
+        font-size: rem(24);
+        background-clip: text;
+        bottom: rem(15);
+        right: 0;
+        padding: 5%;
+        color: rgba(103, 5, 5, 0.153);
+        z-index: 5;
+    }
+
+}
+
+// STICKERS
+
+.sticker {
+    &::after {
+        position: absolute;
+        @include border-radius(small);
+        font-weight: 500;
+        font-size: rem(14);
+        color: #278870;
+        content: "Nouveau";
+        background: #99E2D0;
+        border: solid 1px #30a789;
+        right: 15px;
+        top: 15px;
+        padding: rem(8) rem(15);
+        z-index: 1;
+    }
+}
+
+// COEUR
+.icon-heart {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    font-size: rem(24);
+    color: #ff0000;
+    z-index: 5;
+}

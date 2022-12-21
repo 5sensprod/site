@@ -1,0 +1,101 @@
+//   ANIMATION BACKGROUND BOUTON
+
+@mixin background-transition {
+    transition: background-color 0.5s linear;
+  
+    &:hover {
+        background-color: #F8F8F8;
+      background-color: #9356DC;
+    //   convertir en rgba #9356DC
+    background-color: rgba(147, 86, 220, .2);
+    }
+  }
+
+// BULLE DES BOUTONS ETAPES
+
+  @keyframes anticipation-scale{
+    0%{
+      transform: scale(1);
+    }
+    30%{
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(0);
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+      }
+  }
+// Coeur qui se remplit
+.icon-heart {
+    
+    fill: transparent;
+    stroke-width: 30;
+    /* cursor: pointer; */
+    position: relative;
+    transition: all .2ms ease-in-out;
+  }
+  
+  .icon-heart svg {
+    overflow: visible;
+    width: 1.2rem;
+  }
+  
+  .icon-heart path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+  
+  .icon-heart .heart-background {
+    position: absolute;
+    stroke: $primary-color;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+
+  .heart-main {
+    stroke: rgb(132, 132, 132);
+  }
+
+  .heart-main:hover{
+    stroke: $secondary-color;
+  }
+
+  .heart-main:hover path {
+    /* animation: fade-animation .3s ease-in-out forwards; */
+    animation: stroke-animation .5s cubic-bezier(.01,.88,.97,.13) forwards;
+
+    @keyframes stroke-animation {
+        0% {
+          stroke: $primary-color;
+          stroke-dashoffset: 0;
+        }
+        30% {
+          stroke-dashoffset: 1550;
+        }
+        60% {
+          stroke-dashoffset: 3100;
+          fill: transparent;
+          transform: scale(1);
+        }
+        80% {
+          fill: $primary-color;
+          transform: scale(1.1);
+        }
+        90% {
+          transform: scale(1);
+        }
+        100% {
+          stroke-dashoffset: 3100;
+          fill: $secondary-color;
+        }
+      }
+  }
