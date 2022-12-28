@@ -55,11 +55,13 @@
   .icon-heart .heart-background {
     position: absolute;
     stroke: $primary-color;
-    left: 0;
     right: 0;
+    
     z-index: -1;
     stroke: none;
   }
+
+
 
   .heart-main {
     stroke: rgb(132, 132, 132);

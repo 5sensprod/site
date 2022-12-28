@@ -1,15 +1,16 @@
-@import "libs/__fonts.scss";
-@import "libs/__reset.scss";
-@import "libs/__header.scss";
-@import "libs/__mixins.scss";
 @import "libs/__variables.scss";
-@import "libs/__form.scss";
+@import "libs/__mixins.scss";
+@import "libs/__fonts.scss";
 @import "libs/__buttons.scss";
+@import "libs/__reset.scss";
+@import "libs/__loader.scss";
+@import "libs/__navigation.scss";
+@import "libs/__header.scss";
+@import "libs/__form.scss";
+@import "libs/__sections.scss";
 @import "libs/__animations.scss";
 @import "libs/__cards.scss";
-@import "libs/__sections.scss";
 @import "libs/__banner.scss";
-@import "libs/__loader.scss";
 @import "libs/__footer.scss";
 
 html {
@@ -22,5 +23,9 @@ body {
     padding: 0;
     background: #ffffff;
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: black; min-width: 200px;
+}
+
+.bloc_page {
+   
 }

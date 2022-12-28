@@ -11,6 +11,11 @@ body {
   font-size: 1.0625rem;
 }
 
+@media (min-width: 996px) {
+  .bloc_page {
+    max-width: 1400px;
+  }
+}
 .header {
   text-align: center;
   padding: 0.5rem 0;
@@ -82,6 +87,20 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.25rem;
+}
+@media (min-width: 996px) {
+  .card-section {
+    padding: 2rem 8%;
+  }
+  .card-section__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    max-width: 1250px;
+  }
 }
 
 .footer {
@@ -246,7 +265,6 @@ input[type=search]:focus {
 .icon-heart .heart-background {
   position: absolute;
   stroke: #9356DC;
-  left: 0;
   right: 0;
   z-index: -1;
   stroke: none;
@@ -311,6 +329,8 @@ input[type=search]:focus {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   position: relative;
   max-width: 21rem;
   width: 100%;
@@ -348,6 +368,55 @@ input[type=search]:focus {
   z-index: 5;
 }
 
+@media (min-width: 375px) {
+  .card {
+    flex-direction: column;
+  }
+}
+@media (min-width: 744px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    max-width: 420px;
+    height: 180px;
+  }
+  .card img {
+    border-radius: 0.625rem 0 0 0.625rem;
+    width: 270px;
+    max-width: 70%;
+    height: auto;
+  }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 5%;
+    width: 50%;
+  }
+}
+@media (min-width: 996px) {
+  .card {
+    display: flex;
+    max-width: 26.25rem;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+  }
+  .card img {
+    max-width: 100%;
+    border-radius: 0.625rem 0.625rem 0 0;
+    height: 10.75rem;
+    object-fit: cover;
+    width: 26.25rem;
+  }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 5%;
+    width: 52%;
+  }
+}
 .sticker::after {
   position: absolute;
   border-radius: 0.125rem;
@@ -357,10 +426,30 @@ input[type=search]:focus {
   content: "Nouveau";
   background: #99E2D0;
   border: solid 1px #30a789;
-  right: 15px;
-  top: 15px;
   padding: 0.5rem 0.9375rem;
   z-index: 1;
+}
+@media (min-width: 375px) {
+  .sticker::after {
+    right: 15px;
+    top: 15px;
+  }
+}
+@media (min-width: 744px) {
+  .sticker::after {
+    right: unset;
+    top: unset;
+    left: 15px;
+    top: 15px;
+  }
+}
+@media (min-width: 744px) and (min-width: 996px) {
+  .sticker::after {
+    left: unset;
+    top: unset;
+    left: 15px;
+    top: 15px;
+  }
 }
 
 .icon-heart {
@@ -372,6 +461,18 @@ input[type=search]:focus {
   z-index: 5;
 }
 
+@media (min-width: 744px) {
+  .icon-heart {
+    right: 108px;
+    bottom: 15px;
+  }
+}
+@media (min-width: 996px) {
+  .icon-heart {
+    bottom: 20px;
+    right: 15px;
+  }
+}
 .spinner--primary {
   position: absolute;
   top: 50%;

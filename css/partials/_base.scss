@@ -15,6 +15,15 @@ body {
     font-size: rem(17);
 }
 
+@media (min-width: 996px) {
+    .bloc_page {
+        max-width: 1400px;
+    }
+
+}
+
+
+
 .header {
 
     text-align: center;
@@ -95,6 +104,20 @@ body {
         flex-direction: column;
         align-items: center;
         gap: rem(20);
+    }
+
+    @media (min-width: 996px) {
+        padding: 2rem 8%;
+        &__container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: rem(20);
+     max-width: 1250px;
+
+        }
     }
 }
 

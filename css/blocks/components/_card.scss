@@ -6,7 +6,8 @@ $card-width--menu: rem(350);
 $card-heigth--restaurant: rem(250);
 
 .card {
-    
+    display: flex;
+    flex-direction: column;
     position: relative;
     max-width: $card-width--restaurant;
     width: 100%;
@@ -53,6 +54,65 @@ $card-heigth--restaurant: rem(250);
 
 }
 
+@media (min-width: 375px) {
+    .card {
+        flex-direction: column;
+        
+    }
+}
+
+@media (min-width: 744px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        max-width: 420px;
+        height: 180px;
+
+        img {
+            @include border-radius(medium-left);
+            width: 270px;
+            max-width: 70%;
+            height: auto;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 20px 5%;
+            width: 50%;
+        }
+    }
+}
+
+@media (min-width: 996px) {
+    .card {
+        display: flex;
+        max-width: rem(420);
+        width: auto;
+        height: auto;
+        flex-direction: column;
+
+
+        img {
+            max-width: 100%;
+            @include border-radius(medium-top);
+            height: rem(172);
+            object-fit: cover;
+            width: rem(420);
+
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 20px 5%;
+            width: 52%;
+        }
+    }
+}
+
 // STICKERS
 
 .sticker {
@@ -65,10 +125,36 @@ $card-heigth--restaurant: rem(250);
         content: "Nouveau";
         background: #99E2D0;
         border: solid 1px #30a789;
-        right: 15px;
-        top: 15px;
+
         padding: rem(8) rem(15);
         z-index: 1;
+    }
+
+    @media (min-width: 375px) {
+        &::after {
+            right: 15px;
+            top: 15px;
+        }
+      }
+
+    @media (min-width: 744px) {
+
+        &::after {
+            right: unset;
+            top: unset;
+            left: 15px;
+            top: 15px;
+        }
+
+        @media (min-width: 996px) {
+            &::after {
+                left: unset;
+            top: unset;
+                left: 15px;
+                top: 15px;
+            }
+          }
+        
     }
 }
 
@@ -80,4 +166,20 @@ $card-heigth--restaurant: rem(250);
     font-size: rem(24);
     color: #ff0000;
     z-index: 5;
+
+}
+
+@media (min-width: 744px) {
+    .icon-heart {
+        right: 108px;
+        bottom: 15px;
+    }
+}
+
+
+@media (min-width: 996px) {
+    .icon-heart {
+        bottom: 20px;
+        right: 15px;
+    }
 }
