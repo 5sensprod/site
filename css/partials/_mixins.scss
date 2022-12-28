@@ -57,8 +57,13 @@ $font-size-root: 16;
     @else if $radius == medium {
         border-radius: rem(10);
       }
+
     @else if $radius == medium-top {
         border-radius: rem(10) rem(10) 0 0;
+    }
+
+    @else if $radius == medium-left {
+        border-radius: rem(10) 0  0 rem(10) ;
     }
 
     @else if $radius == large {

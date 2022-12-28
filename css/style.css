@@ -13,7 +13,10 @@ body {
 
 @media (min-width: 996px) {
   .bloc_page {
-    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1250px;
+    margin: auto;
   }
 }
 .header {
@@ -87,10 +90,11 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.25rem;
+  margin: auto;
 }
 @media (min-width: 996px) {
   .card-section {
-    padding: 2rem 8%;
+    padding: 2rem 6%;
   }
   .card-section__container {
     display: flex;
@@ -106,7 +110,7 @@ body {
 .footer {
   background-color: #353535;
   color: white;
-  padding: 2rem;
+  padding: 2rem 10%;
 }
 .footer__logo_text {
   font-size: 18px;
@@ -153,6 +157,14 @@ body {
   box-shadow: 5px 12px 12px -2px rgba(154, 146, 165, 0.25);
   padding: 10px;
 }
+@media (min-width: 996px) {
+  .steps-section__list {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}
 
 /* Style pour numéroter et afficher un rond autour des éléments de liste */
 .step {
@@ -184,6 +196,11 @@ body {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
+}
+@media (min-width: 996px) {
+  .step {
+    width: 250px;
+  }
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
