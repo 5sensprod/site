@@ -33,9 +33,13 @@ body {
     padding: 0.5rem 0;
 
     &__logo_text {
+        text-align: center;
         @include logo-text-style();
-        margin-bottom: rem(4);
-    word-break: break-all;
+        // margin-bottom: rem(4);
+        word-break: break-all;
+        background: white;
+        display: block
+        
 
     }
 
@@ -45,7 +49,7 @@ body {
     }
 
     &__brand {
-        padding: 2rem 2% 0 2% ;
+        padding: 2rem 2% 0 2%;
         @include background-color-gray(light);
 
         &_tagline {
@@ -75,12 +79,27 @@ body {
             transition: background-color 0.2s ease;
         }
     }
+    @media (min-width: 744px) {
+        text-align: left;
+
+        &__brand {
+            padding-left: 10%; 
+        }
+
+        &__navigation {
+            padding-left: 10%
+        }
+    }
+
+    @media (min-width: 996px) {
+        padding: 0;
+    } 
 }
 
 
 .steps-section {
     @include border-radius(none);
-    padding: 2rem 5%;
+    padding: 2rem 10%;
 
     &__title {
         font-weight: 700;
@@ -88,11 +107,25 @@ body {
         margin-bottom: 1.52rem;
         word-break: break-all;
     }
+    @media (min-width: 744px) {
+        padding: 2rem 0px;
+        &__title {
+            padding-left: 12%;
+            padding-bottom: rem(20);
+        }
+
+
+    }
+    @media (min-width: 996px) {
+        padding: 2rem 0;
+        max-width: 1250px;
+        background: #5a00970f;
+    } 
 }
 
 
 .card-section {
-    padding: 2rem;
+    padding: 2rem 10%;
     padding-bottom: rem(65);
     @include background-color-gray(light);
 
@@ -110,8 +143,21 @@ body {
         margin: auto;
     }
 
+    @media (min-width: 744px) {
+        padding: 2rem 0px;
+
+        &__title {
+            padding-left: 12%;
+            padding-bottom: rem(20);
+        }
+
+
+    }
+
     @media (min-width: 996px) {
-        padding: 2rem 6%;
+        padding: 2rem 0;
+        max-width: 1250px;
+
         &__container {
             display: flex;
             flex-direction: row;
@@ -119,7 +165,7 @@ body {
             align-items: center;
             justify-content: center;
             gap: rem(20);
-     max-width: 1250px;
+            max-width: 1250px;
 
         }
     }
