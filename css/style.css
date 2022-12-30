@@ -341,8 +341,24 @@ body {
 }
 @media (min-width: 996px) {
   .step {
-    width: 250px;
+    width: 16.875rem;
   }
+}
+
+.header-page__logo_container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 4.0625rem;
+}
+.header-page__navigation {
+  padding: 1.875rem 2% 1.25rem 2%;
+}
+.header-page__navigation_link {
+  justify-self: flex-start;
+  margin-left: 4.0625rem;
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -668,6 +684,33 @@ input[type=search]:focus {
     right: 15px;
   }
 }
+.card--menu {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 21.875rem;
+}
+.card--menu:hover .card__slide {
+  right: 0;
+}
+.card--menu:hover .card__check {
+  rotate: 360deg;
+}
+.card--menu:hover .card__price {
+  padding: 0 83px 12px 0;
+}
+.card--menu:hover .card__desc {
+  width: 208px;
+}
+.card--menu:hover .card__name {
+  width: 208px;
+}
+
 .spinner--primary {
   position: absolute;
   top: 50%;
@@ -783,6 +826,237 @@ input[type=search]:focus {
   100% {
     width: 100%;
   }
+}
+.banner {
+  z-index: -1;
+  background-image: url("../img/jay-wennington-N_Y88TWmGwA-unsplash-min.jpg");
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 255px;
+}
+
+section {
+  padding: 22rem;
+  background-color: #fff;
+}
+
+.home-section {
+  color: #fff;
+  text-align: center;
+}
+
+.home-section h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.home-section p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.page-section {
+  border-top: 1px solid #eee;
+}
+
+.page-section h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.page-section p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.container {
+  width: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 65px;
+  margin: 0 auto;
+}
+
+.section--steps {
+  padding-bottom: 56px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.section--page {
+  padding-bottom: 50px;
+}
+.section__header-title {
+  word-break: break-all;
+  padding-top: 49px;
+  padding-left: 5%;
+}
+.section--restaurant {
+  background-color: #F7F7F7;
+}
+.section--restaurant .section__header-title {
+  display: flex;
+  width: 52%;
+  justify-content: center;
+}
+.section--page {
+  background-color: #F7F7F7;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: -38px;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+}
+.section--page .section__header {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 33px;
+}
+.section--page .section__header-title {
+  word-break: normal;
+  position: relative;
+  padding-left: 13px;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+}
+.section--menu {
+  display: flex;
+  flex-direction: column;
+}
+.section--menu .section__header-title {
+  white-space: nowrap;
+  display: inline-block;
+  width: 40px;
+  font-family: unset;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 0 0 8px 0;
+  margin-top: 0;
+  margin-bottom: 36px;
+  border-bottom: solid 4px #99E2D0;
+}
+
+.section__steps-list {
+  max-width: 336px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 10px;
+  margin: 40px auto 0 auto;
+  list-style: none;
+  counter-reset: li;
+}
+.section__steps-list-item {
+  font-weight: 500;
+  width: 100%;
+  counter-increment: li;
+  display: inline-flex;
+  align-items: center;
+}
+.section__steps-list-item::before {
+  content: counter(li);
+  font-weight: 700;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 5% 67px 5%;
+  width: 100%;
+  gap: 18px;
+  margin: auto;
+}
+@media (min-width: 954px) {
+  .gallery--direction {
+    flex-direction: unset;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.gallery--section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+.gallery--menu {
+  padding: 0;
+  gap: 14px;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9em 1.5em;
+  cursor: pointer;
+}
+.button--nav, .button--order {
+  border: none;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+.button--steps {
+  border-radius: 20px;
+  width: 95%;
+  font-weight: 500;
+  background: #F8F8F8;
+  box-shadow: 5px 12px 12px -2px rgba(154, 146, 165, 0.25);
+  transition: all 0.2s linear;
+  display: flex;
+  align-items: center;
+  gap: 6%;
+  margin-left: -5px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+.button--steps::before {
+  content: "   ";
+  min-width: 1.6em;
+  height: 1.6em;
+  margin-left: -35px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  transition: all 0.2s linear;
+}
+.button--steps:hover {
+  transition: background-color 0.5s linear;
+  box-shadow: 0px 8px 8px -4px rgba(154, 146, 165, 0.9);
+}
+.button--steps:hover:hover {
+  background-color: #F8F8F8;
+  background-color: #9356DC;
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.button--steps:hover::before {
+  animation: anticipation-scale 0.2s linear;
+}
+.button--steps i {
+  font-size: 1.1em;
+  color: #7E7E7E;
+  transition: all 0.3s ease;
+  margin-right: 5px;
+}
+.button--steps:hover i {
+  color: #9356DC;
+}
+.button--order {
+  margin-top: 40px;
+  padding: 1em 3.8em;
 }
 
 /*# sourceMappingURL=style.css.map */

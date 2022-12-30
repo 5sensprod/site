@@ -54,6 +54,8 @@ $card-heigth--restaurant: rem(250);
 
 }
 
+
+
 @media (min-width: 375px) {
     .card {
         flex-direction: column;
@@ -182,4 +184,39 @@ $card-heigth--restaurant: rem(250);
         bottom: 20px;
         right: 15px;
     }
+}
+
+.card {
+    &--menu {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        overflow: hidden;
+        width: $card-width--menu;
+    
+        &:hover .card__slide {
+          right: 0;
+        }
+    
+        &:hover .card__check {
+          rotate: 360deg;
+        }
+    
+        &:hover .card__price {
+          padding: 0 83px 12px 0;
+        }
+    
+        &:hover .card__desc {
+          width: 208px;
+        }
+    
+        &:hover .card__name {
+          width: 208px;
+        }
+      }
+    
 }

@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"); /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  height: auto;
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.brand {
+  padding: 40px 35px 31px 35px;
+}
+.brand .brand__tagline {
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 11px;
+}
+.brand .brand__underline {
+  color: #7E7E7E;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #F7F7F7;
+  margin-top: 15px;
+  padding-bottom: 56px;
+}
+.header--page {
+  background: rgba(255, 255, 255, 0);
+  padding-bottom: 0;
+}
+.header__logo {
+  display: block;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 2em;
+  background: #fff;
+}
+@media (min-width: 640px) {
+  .header__logo .bloc_page {
+    width: 300px;
+  }
+}
+
+.form {
+  background-color: #EAEAEA;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.form .form__input {
+  background-color: #EAEAEA;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: unset;
+}
+.form .form__icon {
+  font-size: 18px;
+}
+.form--page {
+  display: none;
+}
+
+@keyframes anticipation-scale {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.icon-heart {
+  fill: transparent;
+  stroke-width: 30;
+  /* cursor: pointer; */
+  position: relative;
+  transition: all 0.2ms ease-in-out;
+}
+
+.icon-heart svg {
+  overflow: visible;
+  width: 1.2rem;
+}
+
+.icon-heart path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  transform-origin: center;
+}
+
+.icon-heart .heart-background {
+  position: absolute;
+  stroke: red;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+
+.heart-main {
+  stroke: rgb(132, 132, 132);
+}
+
+.heart-main:hover {
+  stroke: red;
+}
+
+.heart-main:hover path {
+  /* animation: fade-animation .3s ease-in-out forwards; */
+  animation: stroke-animation 0.5s cubic-bezier(0.01, 0.88, 0.97, 0.13) forwards;
+}
+@keyframes stroke-animation {
+  0% {
+    stroke: red;
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: red;
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: red;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9em 1.5em;
+  cursor: pointer;
+}
+.button--nav, .button--order {
+  border: none;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+.button--steps {
+  border-radius: 20px;
+  width: 336px;
+  font-weight: 500;
+  background: #F8F8F8;
+  box-shadow: 5px 12px 12px -2px rgba(154, 146, 165, 0.25);
+  transition: all 0.2s linear;
+  display: inline-flex;
+  align-items: center;
+  gap: 29px;
+  margin-left: -5px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+.button--steps::before {
+  content: "";
+  width: 1.6em;
+  height: 1.6em;
+  margin-left: -35px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  transition: all 0.2s linear;
+}
+.button--steps:hover {
+  transition: background-color 0.5s linear;
+  box-shadow: 0px 8px 8px -4px rgba(154, 146, 165, 0.9);
+}
+.button--steps:hover:hover {
+  background-color: #F8F8F8;
+  background-color: #9356DC;
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.button--steps:hover::before {
+  animation: anticipation-scale 0.2s linear;
+}
+.button--steps i {
+  font-size: 1.1em;
+  color: #7E7E7E;
+  transition: all 0.3s ease;
+}
+.button--steps:hover i {
+  color: #9356DC;
+}
+.button--order {
+  margin-top: 40px;
+  padding: 1em 3.8em;
+}
+
+@keyframes anticipation-scale {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.icon-heart {
+  fill: transparent;
+  stroke-width: 30;
+  /* cursor: pointer; */
+  position: relative;
+  transition: all 0.2ms ease-in-out;
+}
+
+.icon-heart svg {
+  overflow: visible;
+  width: 1.2rem;
+}
+
+.icon-heart path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  transform-origin: center;
+}
+
+.icon-heart .heart-background {
+  position: absolute;
+  stroke: red;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+
+.heart-main {
+  stroke: rgb(132, 132, 132);
+}
+
+.heart-main:hover {
+  stroke: red;
+}
+
+.heart-main:hover path {
+  /* animation: fade-animation .3s ease-in-out forwards; */
+  animation: stroke-animation 0.5s cubic-bezier(0.01, 0.88, 0.97, 0.13) forwards;
+}
+@keyframes stroke-animation {
+  0% {
+    stroke: red;
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: red;
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: red;
+  }
+}
+
+.card {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 336px;
+  width: 336px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.card__media img {
+  width: 336px;
+  height: 175px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+}
+.card__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 17px;
+  padding: 15px;
+}
+.card__name {
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  margin-top: -5px;
+}
+.card__district {
+  font-weight: 400;
+  letter-spacing: 0.001em;
+}
+.card--menu {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 350px;
+}
+.card--menu:hover .card__slide {
+  right: 0;
+}
+.card--menu:hover .card__check {
+  rotate: 360deg;
+}
+.card--menu:hover .card__price {
+  padding: 0 83px 12px 0;
+}
+.card--menu:hover .card__desc {
+  width: 208px;
+}
+.card--menu:hover .card__name {
+  width: 208px;
+}
+.card--menu .card__name {
+  font-weight: 700;
+  font-size: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 268px;
+  transition: all 0.3s ease;
+}
+.card--menu .card__desc {
+  display: block;
+  color: #575757;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: -0.006em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.card--menu .card__price {
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 0 22px 12px 0;
+  color: #424242;
+  transition: all 0.3s ease;
+}
+.card--menu .card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px 22px 12px;
+}
+.card--menu .card__slide {
+  display: flex;
+  justify-content: center;
+  width: 61px;
+  height: 100%;
+  position: absolute;
+  right: -61px;
+  background: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  transition: all 0.3s ease;
+}
+.card--menu .card__check {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  color: #99E2D0;
+  margin: auto;
+  rotate: 0deg;
+  transition: all 0.3s ease;
+}
+
+.container {
+  width: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 65px;
+  margin: 0 auto;
+}
+
+.section--steps {
+  padding-bottom: 56px;
+}
+.section--page {
+  padding-bottom: 50px;
+}
+.section__header-title {
+  padding-top: 49px;
+  padding-left: 49px;
+}
+.section--restaurant {
+  background-color: #F7F7F7;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: auto;
+}
+.section--page {
+  background-color: #F7F7F7;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: -38px;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+}
+.section--page .section__header {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 33px;
+}
+.section--page .section__header-title {
+  position: relative;
+  padding-left: 13px;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+}
+.section--menu {
+  display: flex;
+  flex-direction: column;
+}
+.section--menu .section__header-title {
+  white-space: nowrap;
+  display: inline-block;
+  width: 40px;
+  font-family: unset;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 0 0 8px 0;
+  margin-top: 0;
+  margin-bottom: 36px;
+  border-bottom: solid 4px #99E2D0;
+}
+
+.section__steps-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 10px;
+  margin: 10px;
+  list-style: none;
+  counter-reset: li;
+}
+.section__steps-list-item {
+  font-weight: 500;
+  display: flex;
+  align-items: baseline;
+  width: 336px;
+  counter-increment: li;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.section__steps-list-item::before {
+  content: counter(li);
+  font-weight: 700;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  display: inline-flex;
+  z-index: 1;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 67px;
+  gap: 18px;
+}
+.gallery--section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+.gallery--menu {
+  padding: 0;
+  gap: 14px;
+}
+
+.banner {
+  z-index: -1;
+  background-image: url("../img/jay-wennington-N_Y88TWmGwA-unsplash-min.jpg");
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 255px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  background-color: #333;
+  color: #fff;
+  padding: 25px;
+}
+
+.footer__logo {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer__list li a {
+  color: #fff;
+}
+.footer__list li a:hover {
+  text-decoration: underline;
+}
+.footer__list li i {
+  margin-right: 5px;
+  font-size: 14px;
+  width: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

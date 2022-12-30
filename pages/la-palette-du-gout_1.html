@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style-page.css">
     <script src="https://kit.fontawesome.com/993684100f.js" crossorigin="anonymous"></script>
     <title>Votre restaurant - La palette du goût</title>
 </head>
@@ -13,16 +13,26 @@
 <body>
     <div id="bloc_page">
         <!-- HEADER -->
-        <header class="header-page">
-            <div class="header-page__logo_container">
-                <span class="header__logo_text">
+        <header class="header header--page">
+            <div class="container">
+                <span class="header__logo">
                     ohmyfood
                 </span>
                 <!-- NAVIGATION -->
-                <nav class="header-page__navigation">
-                    <a class="header-page__navigation_link" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+                <nav class="nav nav--page">
+                    <ul class="nav__list">
+                        <li class="nav__list-item">
+                            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
+            <!-- FORMULAIRE DE RECHERCHE -->
+            <form class="form form--page button button--page" method="post" action="traitement.php">
+                <i class="fa-solid fa-location-dot form__icon"></i>
+                <input type="search" name="rechercher" class="form__input" id="rechercher" maxlength="24"
+                    placeholder="Paris, Belleville">
+            </form>
             <!-- BANNIERE-->
             <div class="banner"></div>
         </header>
@@ -179,28 +189,15 @@
         </main>
 
         <!-- FOOTER -->
-         <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer__logo_container">
-            <p class="footer__logo_text">ohmyfood</p>
-        </div>
-        <ul class="footer__list">
-            <li class="footer__item">
-                <i class="fa-solid fa-utensils"></i>
-                <a class="footer__link" href="#">Proposer un restaurant</a>
-            </li>
-            <li class="footer__item">
-                <i class="fa-solid fa-handshake-angle"></i>
-                <a class="footer__link" href="#">Devenir partenaire</a>
-            </li>
-            <li class="footer__item">
-                <a class="footer__link" href="#">Mentions légales</a>
-            </li>
-            <li class="footer__item">
-                <a class="footer__link" href="mailto:contact@example.com">Envoyer un email</a>
-            </li>
-        </ul>
-    </footer>
+        <footer class="footer">
+            <span class="footer__logo">ohmyfood</span>
+            <ul class="footer__list">
+                <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <a href="mailto:email@example.com">Contact</a></li>
+            </ul>
+        </footer>
     </div>
 </body>
 
