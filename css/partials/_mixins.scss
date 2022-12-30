@@ -67,8 +67,12 @@ $font-size-root: 16;
     }
 
     @else if $radius == large {
-        border-radius: 25px;
+        border-radius: rem(25);
     }
+
+    @else if $radius == large-top {
+      border-radius: rem(25) rem(25) 0 0;
+  }
 }
 
 @mixin border-radius2($radius, $sides: all) {

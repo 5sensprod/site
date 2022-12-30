@@ -1,291 +1,65 @@
 @import "../partials/variables";
 @import "../partials/mixins";
 
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$black-color: #101010;
-$grey-dark: #EAEAEA;
-$body-font: "Roboto", sans-serif;
-$logo-font: "Shrikhand", sans-serif;
-
-// styles communs à toutes les sections
-section {
-    padding: 22rem;
-    background-color: #fff;
-  }
-  
-  // styles pour la section de la home
-  .home-section {
-
-    color: #fff;
-    text-align: center;
-  }
-  
-  .home-section h1 {
-    font-size: 3rem;
-    margin: 1rem 0;
-  }
-  
-  .home-section p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-  }
-  
-  // styles pour les sections de pages
-  .page-section {
-    border-top: 1px solid #eee;
-  }
-  
-  .page-section h2 {
-    font-size: 2rem;
-    margin: 2rem 0 1rem;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .page-section p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-  }
-  // / SECTIONS
-.container {
-  width:auto;
-  background: #fff;
+.section-page {
+  @include background-color-gray(light);
+  padding-top: rem(68);
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 65px;
-  margin:0 auto;
+  align-items: baseline;
+  width: 100%;
+  margin-top: -38px;
+  justify-content: center;
+  gap: rem(33);
+  @include border-radius(large-top);
+
+  &__title {
+    padding-left: rem(13);
+    font-family: $logo-font;
+    font-size: rem(28);
+    margin-bottom: rem(29);
+  }
+
+  @media (min-width: 744px) {}
+
+  @media (min-width: 996px) {}
 }
 
-.section {
 
-  &--steps {
-      padding-bottom: 56px;
-      padding-left: 20px;
-      padding-right: 20px;
-  }
-
-  &--page{
-      padding-bottom: 50px;
-  }
-
-
-  &__header {    
-  }
-
-  &__header-title {
-      word-break: break-all;
-      padding-top: 49px;
-      padding-left:5%;
-      
-  }
-
-  &--restaurant {
-      background-color: #F7F7F7;
-  }
-  &--restaurant .section__header-title {
-      display: flex;
-      width: 52%;
-      justify-content: center;
-  }
-
-  &--page {
-      background-color: #F7F7F7;
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      margin-top: -38px;
-      // margin: auto;
-      // gap: 39px;
-      @include rounded-border-top(38px);
-  }
-
-  &--page .section__header {
-      position: relative;
-      display: flex;
-      align-items: baseline;
-      gap: 33px;
-
-  }
-
-  &--page .section__header-title {
-      word-break: normal;
-      position: relative;
-      padding-left: 13px;
-      font-family: $logo-font;
-      font-size: 28px;
-  }
-
-   &--menu {
-      display: flex;
-      flex-direction: column;
-  }
-
-  &--menu .section__header-title {
-      white-space: nowrap;
-      display: inline-block;
-      width: 40px;
-      font-family: unset;
-      font-weight: 400;
-      font-size: 16px;
-      text-transform: uppercase;
-      padding: 0 0 8px 0;
-      margin-top: 0;
-      // margin-left: 16px;
-      margin-bottom: 36px;
-      border-bottom: solid 4px $tertiary-color;
-
-  }
-}
-
-// SECTION ETAPES
-.section__steps-list {
-max-width: 336px;
+.menu-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  padding: 10px;
-  margin: 40px auto 0 auto;
-  list-style: none;
-  counter-reset: li;
+  gap: rem(20);
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  @include background-color-gray(light);
 
-  &-item {
-  
-      font-weight: 500;
-      width: 100%;
-      counter-increment: li;
-      display: inline-flex;
-      align-items: center;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 67px;
+    gap: 18px;
 
-      // La numérotation
-
-      &::before {
-          content: counter(li);
-          font-weight: 700;
-          font-size: 14px;
-          color: rgb(255, 255, 255);
-          z-index: 1;
-      }
   }
+
+
+  @media (min-width: 744px) {}
+
+  @media (min-width: 996px) {}
 }
 
-.gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 5% 67px 5%;
-width: 100%;
-  gap: 18px;
-  margin: auto;
+.order {
 
+  text-align: center;
+  color: #FFFFFF;
+  padding: rem(20);
 
-  @media (min-width: 954px) {
-      &--direction {
-          flex-direction: unset;
-          display: flex;
-        flex-wrap: wrap;
-      }
-    }
-  
-  // Gouttière entre les sections de menu pour les pages
-  &--section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 45px;
-  }
-
-  &--direction {
-      
-
-  }
-
-  &--menu {
-      padding: 0;
-      gap: 14px;
-      // margin-bottom: 40px;
-  }
 }
-  // BOUTON
-@mixin button {
-    display: inline-block;
-    padding: 0.9em 1.5em;
-    cursor: pointer;
-  }
 
-  .button {
-    @include button;
-
-    // NAVIGATION ACCUEIL
-    &--nav {
-        border: none;
-        font-weight: 500;
-        color: #fff;
-        background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
-        @include rounded-border(25px);
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.2s ease;      
-    }
-
-    // &--nav:hover {
-    //     }
-
-    // BOUTONS ETAPES
-
-    &--steps {
-    //    max-width: 100%;
-        @include rounded-border(20px);
-width: 95%;
-        font-weight: 500;
-        background: #F8F8F8;
-        box-shadow: 5px 12px 12px -2px rgba(154, 146, 165, 0.25);
-        transition: all 0.2s linear;
-        display: flex;
-        
-        align-items: center;
-        gap: 6%;
-        margin-left: -5px;
-        padding-top: 26px;
-        padding-bottom: 26px;
-
-        &::before {
-            content:'   ';
-            min-width: 1.6em;
-            height: 1.6em;
-            margin-left: -35px;
-            border-radius: 50%;
-            background-color: $primary-color;
-            transition: all 0.2s linear;
-        }
-    }
-    
-    &--steps:hover {
-        @include background-transition;
-        box-shadow: 0px 8px 8px -4px rgba(154, 146, 165, 0.90);  
-    }
-    &--steps:hover::before  {
-        animation: anticipation-scale 0.2s linear;
-    }  
-
-    &--steps i {
-        font-size: 1.1em;
-        color: #7E7E7E;
-        transition: all 0.3s ease;
-        margin-right: 5px;
-    }
-    
-    &--steps:hover i {
-        color: #9356DC;
-    }
-
-    // LE BOUTON COMMANDER
-    &--order {
-        margin-top: 40px;
-        @extend .button--nav;
-        padding: 1em 3.8em;
-
-    }
+.order-link {
+  font-weight: 500;
+  font-size: 16px;
+margin-bottom: rem(50);
 }
