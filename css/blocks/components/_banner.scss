@@ -9,5 +9,13 @@ $banner-width: 100%;
     width: $banner-width;
     background-position: center;
     background-size: cover;
-height: 255px;
+    height: 255px;
+    @media (min-width: 744px) {
+        height: 355px;
+    }
+}
+
+.shadow-fade-in {
+    width: 100%;
+    box-shadow: 0px -1px 15px 21px #fff;
 }

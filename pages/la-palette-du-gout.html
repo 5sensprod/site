@@ -15,7 +15,7 @@
         <!-- HEADER -->
         <header class="header-page">
             <div class="header-page__logo_container">
-                <span class="header__logo_text">
+                <span class="header-page__logo_text">
                     ohmyfood
                 </span>
                 <!-- NAVIGATION -->
@@ -26,38 +26,38 @@
             </div>
             <!-- BANNIERE-->
             <div class="banner"></div>
+            <div class="shadow-fade-in"></div>
         </header>
 
         <!-- LES SECTIONS DE MENU -->
-        <main>
+        <main class="page-main">
             <section class="section-page">
                 <!-- TITRE DE LA SECTION -->
-                
-                    <h1 class="section-page__title">
-                        La palette du goût
-                    </h1>
-                    <!-- LOGO COEUR -->
-                    <div class="icon-heart icon-heart--page">
-                        <svg class="heart-main" viewBox="0 0 512 512" width="100" title="heart">
-                            <path
-                                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                        </svg>
-                        <svg class="heart-background--page" viewBox="0 0 512 512" width="100" title="heart">
-                            <path
-                                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                        </svg>
-                    
-                </div>
-                <!-- LA GALERIE DES SECTIONS -->
+                <h1 class="section-page__title">
+                    La palette du goût
+                </h1>
+                <!-- LOGO COEUR -->
+                <div class="icon-heart icon-heart--page">
+                    <svg class="heart-main" viewBox="0 0 512 512" width="100" title="heart">
+                        <path
+                            d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                    </svg>
+                    <svg class="heart-background--page" viewBox="0 0 512 512" width="100" title="heart">
+                        <path
+                            d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                    </svg>
 
+                </div>
+                
             </section>
-       
+            <!-- LA GALERIE DES SECTIONS -->
+            <div class="menu-section__wrapper">
+            
                 <!-- LES ENTREES -->
                 <section class="menu-section">
-                        <h2 class="menu-section__title">
-                            Entrées
-                        </h2>
-
+                    <h2 class="menu-section__title">
+                        Entrées
+                    </h2>
                     <div class="menu-section__container">
                         <article class="card-menu">
                             <div class="card-menu__content">
@@ -91,7 +91,7 @@
                         </article>
                     </div>
                 </section>
-
+            
                 <!-- LES PLATS -->
                 <section class="menu-section">
                     <h2 class="menu-section__title">Les plats</h2>
@@ -128,13 +128,13 @@
                         </article>
                     </div>
                 </section>
-
+            
                 <!-- LES DESSERTS -->
                 <section class="menu-section">
-
-                        <h2 class="menu-section__title">
-                            Les desserts
-                        </h2>
+            
+                    <h2 class="menu-section__title">
+                        Les desserts
+                    </h2>
                     <!-- GALERIE DES MENUS -->
                     <div class="menu-section__container">
                         <article class="card-menu">
@@ -169,15 +169,13 @@
                         </article>
                     </div>
                 </section>
-                <!-- COMMANDER -->
-                <div class="order">
-                    <button class="header__navigation_link order-link">Commander</button>
-                </div>
-               
             
-        </main>
-
-        <!-- FOOTER -->
+                <!-- COMMANDER -->
+                <div class="btn-order">
+                    <a class="btn-order__link">Commander</a>
+                </div>
+            </div>
+    </main>
         <!-- FOOTER -->
         <footer class="footer">
             <div class="footer__logo_container">

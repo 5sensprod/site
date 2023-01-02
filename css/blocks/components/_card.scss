@@ -190,106 +190,106 @@ $card-heigth--restaurant: rem(250);
     }
 }
 
-.card {
-    &--menu {
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        background: #FFFFFF;
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-        border-radius: 15px;
-        overflow: hidden;
-        max-width: $card-width--menu;
-        width: 100%;
+// .card {
+//     &--menu {
+//         position: relative;
+//         display: flex;
+//         align-items: flex-end;
+//         justify-content: space-between;
+//         background: #FFFFFF;
+//         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+//         border-radius: 15px;
+//         overflow: hidden;
+//         max-width: $card-width--menu;
+//         width: 100%;
 
-        &:hover .card__slide {
-            right: 0;
-        }
+//         &:hover .card__slide {
+//             right: 0;
+//         }
 
-        &:hover .card__check {
-            rotate: 360deg;
-        }
+//         &:hover .card__check {
+//             rotate: 360deg;
+//         }
 
-        &:hover .card__price {
-            padding: 0 83px 12px 0;
-        }
+//         &:hover .card__price {
+//             padding: 0 83px 12px 0;
+//         }
 
-        &:hover .card__desc {
-            max-width: 208px;
-            width: 100%;
-        }
+//         &:hover .card__desc {
+//             max-width: 208px;
+//             width: 100%;
+//         }
 
-        &:hover .card__name {
-            max-width: 208px;
-            width: 100%;
-        }
-    }
+//         &:hover .card__name {
+//             max-width: 208px;
+//             width: 100%;
+//         }
+//     }
 
-    &--menu .card__name {
-        font-weight: 700;
-        font-size: 18px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 268px;
-        width: 100%;
-        transition: all 0.3s ease;
-    }
+//     &--menu .card__name {
+//         font-weight: 700;
+//         font-size: 18px;
+//         white-space: nowrap;
+//         text-overflow: ellipsis;
+//         overflow: hidden;
+//         max-width: 268px;
+//         width: 100%;
+//         transition: all 0.3s ease;
+//     }
 
-    &--menu .card__desc {
-        display: block;
-        color: #575757;
-        padding: 0;
-        font-size: 15px;
-        letter-spacing: -0.006em;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+//     &--menu .card__desc {
+//         display: block;
+//         color: #575757;
+//         padding: 0;
+//         font-size: 15px;
+//         letter-spacing: -0.006em;
+//         white-space: nowrap;
+//         text-overflow: ellipsis;
+//         overflow: hidden;
 
-        transition: all 0.3s ease;
-    }
+//         transition: all 0.3s ease;
+//     }
 
-    &--menu .card__price {
-        font-weight: 900;
-        font-size: 15px;
-        line-height: 18px;
-        padding: 0 22px 12px 0;
-        color: #424242;
-        transition: all 0.3s ease;
+//     &--menu .card__price {
+//         font-weight: 900;
+//         font-size: 15px;
+//         line-height: 18px;
+//         padding: 0 22px 12px 0;
+//         color: #424242;
+//         transition: all 0.3s ease;
 
-    }
+//     }
 
-    &--menu .card__content {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        padding: 15px 22px 12px;
-    }
+//     &--menu .card__content {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 5px;
+//         padding: 15px 22px 12px;
+//     }
 
-    &--menu .card__slide {
-        display: flex;
-        justify-content: center;
-        width: 61px;
-        height: 100%;
-        position: absolute;
-        right: -61px;
-        background: #99E2D0;
-        border-radius: 0px 15px 15px 0px;
-        transition: all 0.3s ease;
-    }
+//     &--menu .card__slide {
+//         display: flex;
+//         justify-content: center;
+//         width: 61px;
+//         height: 100%;
+//         position: absolute;
+//         right: -61px;
+//         background: #99E2D0;
+//         border-radius: 0px 15px 15px 0px;
+//         transition: all 0.3s ease;
+//     }
 
-    &--menu .card__check {
-        background-color: #fff;
-        border-radius: 50%;
-        padding: 5px;
-        color: #99E2D0;
-        margin: auto;
-        rotate: 0deg;
-        transition: all 0.3s ease;
-    }
+//     &--menu .card__check {
+//         background-color: #fff;
+//         border-radius: 50%;
+//         padding: 5px;
+//         color: #99E2D0;
+//         margin: auto;
+//         rotate: 0deg;
+//         transition: all 0.3s ease;
+//     }
 
-}
+// }
 
 
 
@@ -297,11 +297,12 @@ $card-heigth--restaurant: rem(250);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     overflow: hidden;
-    position: relative;
     display: flex;
     cursor: pointer;
     background: #FFFFFF;
-
+    max-width: 350px;
+    width: 100%;
+margin: auto;
     &__content {
         white-space: nowrap;
         overflow: hidden;
@@ -311,15 +312,21 @@ $card-heigth--restaurant: rem(250);
     }
 
     &__name {
+        font-weight: 700;
+        font-size: 18px;
         overflow: hidden;
         text-overflow: ellipsis;
         transition: all 0.3s ease;
     }
 
     &__desc {
+        font-weight: 400;
+        font-size: 15px;
         overflow: hidden;
         text-overflow: ellipsis;
         font-weight: 200;
+        letter-spacing: -0.006em;
+        color: #575757
     }
 
     &:hover &__check {
@@ -331,28 +338,31 @@ $card-heigth--restaurant: rem(250);
         margin-right: 0;
 
     }
-    
+
     &__price {
-        font-weight: 500;
+        font-weight: 900;
+font-size: 15px;
         margin-left: auto;
-        flex-shrink: 0;
+
         display: flex;
         align-items: flex-end;
         padding: rem(10) rem(25) rem(10) rem(5);
         transition: all 0.3s ease;
     }
-&__slide {
+
+    &__slide {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 61px;
         height: 100%;
-padding: 15px;
+        padding: rem(18);
         margin-right: -61px;
         background: #99E2D0;
         border-radius: 0px 15px 15px 0px;
         transition: all 0.3s ease;
     }
+
     &__check {
         display: flex;
         justify-content: center;
@@ -363,5 +373,9 @@ padding: 15px;
         background-color: #fff;
         border-radius: 50%;
         transition: all 0.3s ease;
-    }    
+    }
+
+    @media (min-width: 744px) {
+        min-width: 350px;
+      }
 }
