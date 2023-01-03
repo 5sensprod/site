@@ -1,4 +1,4 @@
-@import "../../partials/variables";
+
 
 //   LES SPINNERS
 
@@ -79,16 +79,16 @@
 @keyframes fade-out {
     0% {
         opacity: 1;
-        scale: 1;
+        transform: scale(1);
     }
 
     99% {
-        scale: 1;
+        transform: scale(1);
     }
 
     100% {
         opacity: 0;
-        scale: 0;
+        transform: scale(0);
     }
 }
 

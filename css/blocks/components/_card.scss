@@ -1,5 +1,4 @@
-@import "../../partials/variables";
-@import "../../partials/mixins";
+
 
 $card-width--restaurant: rem(336);
 $card-width--menu: rem(350);
@@ -221,7 +220,7 @@ $card-heigth--restaurant: rem(250);
 
     &:hover &__check {
         margin-right: 0;
-        rotate: 360deg;
+        transform: rotate(360deg);
     }
 
     &:hover &__slide {

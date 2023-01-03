@@ -1,6 +1,3 @@
-@import "../partials/variables";
-@import "../partials/mixins";
-
 .steps-section {
   @include border-radius(none);
   padding: 2rem 10%;

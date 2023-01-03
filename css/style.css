@@ -79,7 +79,7 @@ input[type=search]:focus {
     transform: scale(1);
   }
   30% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
   50% {
     transform: translateX(0);
@@ -411,7 +411,7 @@ input[type=search]:focus {
 }
 .card-menu:hover .card-menu__check {
   margin-right: 0;
-  rotate: 360deg;
+  transform: rotate(360deg);
 }
 .card-menu:hover .card-menu__slide {
   margin-right: 0;
@@ -520,14 +520,14 @@ input[type=search]:focus {
 @keyframes fade-out {
   0% {
     opacity: 1;
-    scale: 1;
+    transform: scale(1);
   }
   99% {
-    scale: 1;
+    transform: scale(1);
   }
   100% {
     opacity: 0;
-    scale: 0;
+    transform: scale(0);
   }
 }
 .logo-fill-color {
@@ -646,7 +646,7 @@ input[type=search]:focus {
   position: relative;
   height: 100%;
   font-weight: 500;
-  font-size: rem 16;
+  font-size: 1rem;
   counter-increment: li;
   background: rgba(0, 0, 0, 0);
   color: #101010;
