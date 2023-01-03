@@ -10,6 +10,19 @@ $banner-width: 100%;
     background-position: center;
     background-size: cover;
     height: 255px;
+
+    &--p2 {
+        background-image: url("../img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-min.jpg");
+    }
+
+    &--p3 {
+        background-image: url("../img/stil-u2Lp8tXIcjw-unsplash-min.jpg");
+    }
+
+    &--p4 {
+        background-image: url("../img/toa-heftiba-DQKerTsQwi0-unsplash-min.jpg");
+    }
+
     @media (min-width: 744px) {
         height: 355px;
     }
@@ -17,5 +30,6 @@ $banner-width: 100%;
 
 .shadow-fade-in {
     width: 100%;
-    box-shadow: 0px -1px 15px 21px #fff;
+        box-shadow: 0px -1px 10px 13px #fff;
+    
 }
