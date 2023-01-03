@@ -1,0 +1,28 @@
+.footer {
+    @include background-color-gray(dark);
+    color: white;
+    padding: 2rem 10%;
+
+    &__logo_text {
+        @include logo-text-style(18px);
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+        font-size: rem(16);
+    }
+
+    &__link {
+        font-weight: 400;
+        color: white;
+    }
+
+    i {
+        width: rem(22);
+        font-size: rem(14);
+    }
+}

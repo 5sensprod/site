@@ -1,0 +1,102 @@
+.header {
+
+    text-align: center;
+    padding: 0.5rem 0;
+
+    &__logo_text {
+        text-align: center;
+        @include logo-text-style();
+        // margin-bottom: rem(4);
+        word-break: break-all;
+        background: white;
+        display: block
+    }
+
+    &__search_form {
+        @include background-color-gray(medium);
+        padding: rem(10);
+    }
+
+    &__brand {
+        padding: 2rem 2% 0 2%;
+        @include background-color-gray(light);
+
+        &_tagline {
+            font-weight: 800;
+            font-size: rem(24);
+            margin-bottom: rem(11);
+        }
+
+        &_underline {
+            font-weight: 300;
+            font-size: rem(18);
+            @include text-color-gray(medium);
+        }
+    }
+
+    &__navigation {
+        @include background-color-gray(light);
+        padding: rem(30) 2% rem(51) 2%;
+
+        &_link {
+            @include button;
+            @include border-radius(large);
+            font-weight: 500;
+            color: #fff;
+            background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s ease;
+        }
+    }
+    @media (min-width: 744px) {
+        text-align: left;
+
+        &__brand {
+            padding-left: 10%; 
+        }
+
+        &__navigation {
+            padding-left: 10%
+        }
+    }
+
+    @media (min-width: 996px) {
+        padding: 0;
+    } 
+}
+
+.header-page {
+    &__logo_container {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+        width: 100%;
+        
+        // gap: rem(65);
+    }
+
+    &__logo_text {
+        text-align: center;
+        @include logo-text-style();
+        margin-bottom: rem(4);
+        margin-left: 15%;
+        word-break: break-all;
+        background: white;
+        display: block
+    }
+
+    &__navigation {
+        
+        // @include background-color-gray(light);
+        // padding: rem(30) 2% rem(20) 2%;
+
+        &_link {
+            
+            justify-self: flex-start;
+            // margin-left: rem(65);
+            // transition: background-color 0.2s ease;
+        }
+    }
+}
