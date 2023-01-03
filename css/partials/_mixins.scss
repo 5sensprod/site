@@ -1,120 +1,120 @@
-
 // Fonction Sass qui convertit une valeur en pixels en rem
 
 $font-size-root: 16;
+
 // en utilisant un ratio de 16 pixels pour 1 rem
 @function rem($px) {
-    @return calc($px / $font-size-root) + rem;
-  }
+  @return calc($px / $font-size-root)+rem;
+}
 
 // Utilisation de la mixin pour définir le style du texte du logo
 @mixin logo-text-style($size: 2em, $logo-font: 'Shrikhand', $text-color: #101010) {
-    font-size: $size;
-    font-family: $logo-font;
-    color: $text-color;
+  font-size: $size;
+  font-family: $logo-font;
+  color: $text-color;
 }
 
 //définir le niveau de gris des fonds
 @mixin background-color-gray($gray) {
-    @if $gray ==dark {
-        background-color: #353535;
-    }
+  @if $gray ==dark {
+    background-color: #353535;
+  }
 
-    @else if $gray ==medium {
-        background-color: #EAEAEA;
-    }
+  @else if $gray ==medium {
+    background-color: #EAEAEA;
+  }
 
-    @else if $gray ==light {
-        background-color: #F7F7F7;
-    }
+  @else if $gray ==light {
+    background-color: #F7F7F7;
+  }
 }
 
 //définir le niveau de gris du texte
 @mixin text-color-gray($gray) {
-    @if $gray ==dark {
-        color: #353535;
-    }
+  @if $gray ==dark {
+    color: #353535;
+  }
 
-    @else if $gray ==medium {
-        color: #7E7E7E;
-    }
+  @else if $gray ==medium {
+    color: #7E7E7E;
+  }
 
-    @else if $gray ==light {
-        color: #7E7E7E;
-    }
+  @else if $gray ==light {
+    color: #7E7E7E;
+  }
 }
 
 //définir les bordures
 
 @mixin border-radius($radius) {
-    @if $radius ==none {
-        border-radius: 0;
-    }
+  @if $radius ==none {
+    border-radius: 0;
+  }
 
-    @else if $radius == small {
-        border-radius: rem(2);
-      }
-    @else if $radius == medium {
-        border-radius: rem(10);
-      }
+  @else if $radius ==small {
+    border-radius: rem(2);
+  }
 
-    @else if $radius == medium-top {
-        border-radius: rem(10) rem(10) 0 0;
-    }
+  @else if $radius ==medium {
+    border-radius: rem(10);
+  }
 
-    @else if $radius == medium-left {
-        border-radius: rem(10) 0  0 rem(10) ;
-    }
+  @else if $radius ==medium-top {
+    border-radius: rem(10) rem(10) 0 0;
+  }
 
-    @else if $radius == large {
-        border-radius: rem(25);
-    }
+  @else if $radius ==medium-left {
+    border-radius: rem(10) 0 0 rem(10);
+  }
 
-    @else if $radius == large-top {
-      border-radius: rem(25) rem(25) 0 0;
+  @else if $radius ==large {
+    border-radius: rem(25);
+  }
+
+  @else if $radius ==large-top {
+    border-radius: rem(25) rem(25) 0 0;
   }
 }
 
 @mixin border-radius2($radius, $sides: all) {
-    border-radius: $radius $sides;
-  }
-
+  border-radius: $radius $sides;
+}
 
 //Le modèle de bouton
 
 @mixin button {
-    display: inline-block;
-    padding: 0.9em 1.5em;
-    cursor: pointer;
-  }
+  display: inline-block;
+  padding: 0.9em 1.5em;
+  cursor: pointer;
+}
 
 // LES MIXINS DE STYLE
 
 
 // Permet de régler la couleur et l'opacité d'un texte
-@mixin color-with-opacity($color:#000000, $opacity: 0.5) {
-    background-color: $color;
-    opacity: $opacity;
-  }
+@mixin color-with-opacity($color: #000000, $opacity: 0.5) {
+  background-color: $color;
+  opacity: $opacity;
+}
 
 // Permet de régler la couleur et l'opacité fond
-  @mixin background-with-opacity($color:#000000, $opacity: 0.5) {
-    background-color: $color;
-    opacity: $opacity;
-  }
+@mixin background-with-opacity($color: #000000, $opacity: 0.5) {
+  background-color: $color;
+  opacity: $opacity;
+}
 
 // Permet de régler la taille du radius des 4 coins
-  @mixin rounded-border($radius: 5px) {
-    border-radius: $radius;
-  }
+@mixin rounded-border($radius: 5px) {
+  border-radius: $radius;
+}
 
 // Permet de régler la taille du radius top ou bottom
 @mixin rounded-border-top($radius) {
-    border-top-left-radius: $radius;
-    border-top-right-radius: $radius;
-  }
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
 
-  @mixin rounded-border-bottom($radius) {
-    border-bottom-left-radius: $radius;
-    border-bottom-right-radius: $radius;
-  }
+@mixin rounded-border-bottom($radius) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}

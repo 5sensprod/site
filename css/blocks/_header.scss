@@ -6,7 +6,6 @@
     &__logo_text {
         text-align: center;
         @include logo-text-style();
-        // margin-bottom: rem(4);
         word-break: break-all;
         background: white;
         display: block
@@ -48,11 +47,12 @@
             transition: background-color 0.2s ease;
         }
     }
+
     @media (min-width: 744px) {
         text-align: left;
 
         &__brand {
-            padding-left: 10%; 
+            padding-left: 10%;
         }
 
         &__navigation {
@@ -62,7 +62,7 @@
 
     @media (min-width: 996px) {
         padding: 0;
-    } 
+    }
 }
 
 .header-page {
@@ -73,8 +73,6 @@
         align-items: baseline;
         justify-content: center;
         width: 100%;
-        
-        // gap: rem(65);
     }
 
     &__logo_text {
@@ -88,15 +86,9 @@
     }
 
     &__navigation {
-        
-        // @include background-color-gray(light);
-        // padding: rem(30) 2% rem(20) 2%;
-
         &_link {
-            
+
             justify-self: flex-start;
-            // margin-left: rem(65);
-            // transition: background-color 0.2s ease;
         }
     }
 }

@@ -2,7 +2,6 @@ $banner-width: 100%;
 @import "../../partials/variables";
 @import "../../partials/mixins";
 
-
 .banner {
     z-index: -1;
     background-image: url("../img/jay-wennington-N_Y88TWmGwA-unsplash-min.jpg");
@@ -30,6 +29,5 @@ $banner-width: 100%;
 
 .shadow-fade-in {
     width: 100%;
-        box-shadow: 0px -1px 10px 13px #fff;
-    
+    box-shadow: 0px -1px 10px 13px #fff;
 }

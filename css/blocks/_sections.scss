@@ -1,32 +1,32 @@
 @import "../partials/variables";
 @import "../partials/mixins";
 
-
 .steps-section {
   @include border-radius(none);
   padding: 2rem 10%;
 
   &__title {
-      font-weight: 700;
-      font-size: rem(24);
-      word-break: break-all;
+    font-weight: 700;
+    font-size: rem(24);
+    word-break: break-all;
   }
+
   @media (min-width: 744px) {
-      padding: 2rem 0px;
-      &__title {
-          padding-left: 12%;
-          padding-bottom: rem(20);
-      }
+    padding: 2rem 0px;
 
+    &__title {
+      padding-left: 12%;
+      padding-bottom: rem(20);
+    }
 
   }
-  @media (min-width: 996px) {
-      padding: 2rem 0;
-      max-width: 1250px;
-      background: #5a00970f;
-  } 
-}
 
+  @media (min-width: 996px) {
+    padding: 2rem 0;
+    max-width: 1250px;
+    background: #5a00970f;
+  }
+}
 
 .card-section {
   padding: 2rem 10%;
@@ -34,44 +34,42 @@
   @include background-color-gray(light);
 
   &__title {
-      font-weight: 700;
-      font-size: rem(24);
-      margin-bottom: 1.52rem;
+    font-weight: 700;
+    font-size: rem(24);
+    margin-bottom: 1.52rem;
   }
 
   &__container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: rem(20);
-      margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(20);
+    margin: auto;
   }
 
   @media (min-width: 744px) {
-      padding: 2rem 0px;
+    padding: 2rem 0px;
 
-      &__title {
-          padding-left: 12%;
-          padding-bottom: rem(20);
-      }
-
-
+    &__title {
+      padding-left: 12%;
+      padding-bottom: rem(20);
+    }
   }
 
   @media (min-width: 996px) {
-      padding: 2rem 0;
+    padding: 2rem 0;
+    max-width: 1250px;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: rem(20);
       max-width: 1250px;
 
-      &__container {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: center;
-          gap: rem(20);
-          max-width: 1250px;
-
-      }
+    }
   }
 }
 
@@ -94,78 +92,57 @@
     margin-bottom: rem(29);
   }
 
-  @media (min-width: 744px) {
-    // width: 70%;
-  }
-
   @media (min-width: 996px) {
     max-width: 800px;
     margin: -38px 0 0 0;
+
     &__title {
       margin-bottom: rem(50);
     }
   }
 }
 
-
 .menu-section {
   display: flex;
   flex-direction: column;
-
   gap: rem(20);
   margin: 0 auto;
   padding: 0 15px;
   max-width: 550px;
-  // width: 100%;
   @include background-color-gray(light);
 
   &__title {
     white-space: nowrap;
-        display: inline-block;
-        width: rem(40);
-        font-family: unset;
-        font-weight: 400;
-        font-size: rem(16);
-        text-transform: uppercase;
-        padding: 0 0 rem(8) 0;
-        margin-top: 0;
-        // margin-left: 16px;
-        // margin-bottom: rem(36);
-        border-bottom: solid 4px $tertiary-color;
-  }
+    display: inline-block;
+    width: rem(40);
+    font-family: unset;
+    font-weight: 400;
+    font-size: rem(16);
+    text-transform: uppercase;
+    padding: 0 0 rem(8) 0;
+    margin-top: 0;
 
-  
+    border-bottom: solid 4px $tertiary-color;
+  }
 
   &__container {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
+
     padding-top: rem(31);
     padding-bottom: 67px;
-   gap: 18px;
+    gap: 18px;
     display: grid;
-    // margin: auto;
+
 
   }
-
-
-    @media (min-width: 744px) {
-      &__container {
-        // padding-left: 18%;
-        //   padding-right: 18%;
-      }
-    }
 
   @media (min-width: 996px) {
     margin: unset;
     padding: 0px 25px;
+
     &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    // justify-content: center;
-    }
-    &__wrapper:nth-child(3) {
-      // width: 350px;
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: center;
     }
   }
 }
@@ -175,7 +152,5 @@
   display: flex;
   flex-direction: column;
   max-width: 800px;
-margin: auto;
-
-
+  margin: auto;
 }

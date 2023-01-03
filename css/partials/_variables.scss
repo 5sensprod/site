@@ -3,9 +3,7 @@ $breakpoint-small: 375px;
 $breakpoint-medium: 744px;
 $breakpoint-large: 1024px;
 
-//
-
-
+// variables couleurs
 $logo-font: 'Shrikhand', cursive;
 $body-font: 'Roboto', sans-serif;
 $primary-color: #9356DC;
@@ -16,7 +14,8 @@ $text-color: #101010;
 // Fonction Sass qui convertit une valeur en pixels en rem
 
 $font-size-root: 16;
+
 // en utilisant un ratio de 16 pixels pour 1 rem
 @function rem($px) {
-    @return calc($px / $font-size-root) + rem;
-  }
+  @return calc($px / $font-size-root)+rem;
+}

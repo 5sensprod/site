@@ -3,9 +3,10 @@
 //   FORMULAIRE
 
 .header__search {
-@include background-color-gray(medium);
+    @include background-color-gray(medium);
+
     &_form {
-        
+
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
         border: none;
         padding: 10px;
@@ -21,14 +22,16 @@
         font-weight: 500;
         box-shadow: unset;
         width: 124px;
-        
+
     }
 
     &_icon {
         font-size: 18px;
     }
+
     @media (min-width: 996px) {
         padding: 2rem 6%;
+
         &__container {
             display: flex;
             flex-direction: row;
@@ -36,7 +39,7 @@
             align-items: center;
             justify-content: center;
             gap: rem(20);
-     max-width: 1250px;
+            max-width: 1250px;
 
         }
     }
