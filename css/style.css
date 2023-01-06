@@ -347,7 +347,7 @@ input[type=search]:focus {
   .sticker::after {
     left: unset;
     top: unset;
-    left: 15px;
+    right: 15px;
     top: 15px;
   }
 }
@@ -777,6 +777,7 @@ input[type=search]:focus {
 }
 
 .section-page {
+  position: relative;
   background-color: #F7F7F7;
   padding-top: 4.25rem;
   display: flex;
@@ -922,20 +923,14 @@ input[type=search]:focus {
   width: 100%;
 }
 .header-page__logo_text {
-  text-align: center;
   font-size: 2em;
   font-family: "Shrikhand";
   color: #101010;
   margin-bottom: 0.25rem;
-  margin-left: 15%;
+  margin-left: 5%;
   word-break: break-all;
   background: white;
-  display: block;
 }
-.header-page__navigation_link {
-  justify-self: flex-start;
-}
-
 .footer {
   background-color: #353535;
   color: white;
