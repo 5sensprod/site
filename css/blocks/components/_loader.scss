@@ -1,5 +1,3 @@
-
-
 //   LES SPINNERS
 
 // une mixin pour les propriété commune aux deux spinners
@@ -10,21 +8,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 10px solid $primary-color;
-    width: 20px;
-    height: 20px;
+    border: rem(10) solid $primary-color;
+    width: rem(20);
+    height: rem(20);
 }
 
 .spinner--primary {
     @include spinner;
-    border-top: 10px solid rgb(255, 255, 255);
+    border-top: rem(10) solid rgb(255, 255, 255);
     background-color: $primary-color;
     animation: spin .5s linear infinite;
 }
 
 .spinner--secondary {
     @include spinner;
-    border: 2px solid #f3f3f3;
+    border: rem(2) solid #f3f3f3;
     background: linear-gradient(90deg, $secondary-color 0%, $secondary-color 50%, $primary-color 100%);
     animation: spin .3s linear infinite;
 }

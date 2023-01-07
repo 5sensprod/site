@@ -16,7 +16,7 @@ body {
     font-size: rem(17);
 }
 
-@media (min-width: 996px) {
+@media (min-width: #{$breakpoint-large}) {
     .bloc_page {
         display: flex;
         flex-direction: column;

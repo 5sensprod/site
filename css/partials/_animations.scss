@@ -6,7 +6,6 @@
   &:hover {
     background-color: #F8F8F8;
     background-color: #9356DC;
-    //   convertir en rgba #9356DC
     background-color: rgba(147, 86, 220, .2);
   }
 }
@@ -36,32 +35,46 @@
   }
 }
 
-//menu appaissant
+/* Menu qui apparait dans les pages restaurants */
 .menu-section__container {
   animation-name: fadeIn;
   animation-delay: .3s;
   animation-duration: 0.9s;
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  /* maintient l'état final de l'animation une fois terminée */
+  transform: translateX(-20px);
+}
+
+/* Décalage temporel entre chaque animation */
+.menu-1 {
+  animation-delay: 0.3s;
+}
+
+.menu-2 {
+  animation-delay: 0.8s;
+}
+
+.menu-3 {
+  animation-delay: 1.3s;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateX(20px);
   }
 
   to {
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
 // Coeur qui se remplit
 .icon-heart {
-
   fill: transparent;
   stroke-width: 30;
-  /* cursor: pointer; */
+  cursor: pointer;
   position: relative;
   transition: all .2ms ease-in-out;
 }

@@ -7,6 +7,20 @@ $font-size-root: 16;
   @return calc($px / $font-size-root)+rem;
 }
 
+// LES MIXINS DE STYLE
+
+// Permet de régler la couleur et l'opacité d'un texte
+@mixin color-with-opacity($color: #000000, $opacity: 0.5) {
+  background-color: $color;
+  opacity: $opacity;
+}
+
+// Permet de régler la couleur et l'opacité fond
+@mixin background-with-opacity($color: #000000, $opacity: 0.5) {
+  background-color: $color;
+  opacity: $opacity;
+}
+
 // Utilisation de la mixin pour définir le style du texte du logo
 @mixin logo-text-style($size: 2em, $logo-font: 'Shrikhand', $text-color: #101010) {
   font-size: $size;
@@ -14,7 +28,7 @@ $font-size-root: 16;
   color: $text-color;
 }
 
-//définir le niveau de gris des fonds
+//définit le niveau de gris des fonds
 @mixin background-color-gray($gray) {
   @if $gray ==dark {
     background-color: #353535;
@@ -29,7 +43,7 @@ $font-size-root: 16;
   }
 }
 
-//définir le niveau de gris du texte
+//définit le niveau de gris du texte
 @mixin text-color-gray($gray) {
   @if $gray ==dark {
     color: #353535;
@@ -44,8 +58,7 @@ $font-size-root: 16;
   }
 }
 
-//définir les bordures
-
+//définit les bordures
 @mixin border-radius($radius) {
   @if $radius ==none {
     border-radius: 0;
@@ -76,45 +89,9 @@ $font-size-root: 16;
   }
 }
 
-@mixin border-radius2($radius, $sides: all) {
-  border-radius: $radius $sides;
-}
-
 //Le modèle de bouton
-
 @mixin button {
   display: inline-block;
   padding: 0.9em 1.5em;
   cursor: pointer;
-}
-
-// LES MIXINS DE STYLE
-
-
-// Permet de régler la couleur et l'opacité d'un texte
-@mixin color-with-opacity($color: #000000, $opacity: 0.5) {
-  background-color: $color;
-  opacity: $opacity;
-}
-
-// Permet de régler la couleur et l'opacité fond
-@mixin background-with-opacity($color: #000000, $opacity: 0.5) {
-  background-color: $color;
-  opacity: $opacity;
-}
-
-// Permet de régler la taille du radius des 4 coins
-@mixin rounded-border($radius: 5px) {
-  border-radius: $radius;
-}
-
-// Permet de régler la taille du radius top ou bottom
-@mixin rounded-border-top($radius) {
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
-}
-
-@mixin rounded-border-bottom($radius) {
-  border-bottom-left-radius: $radius;
-  border-bottom-right-radius: $radius;
 }

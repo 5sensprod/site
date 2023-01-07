@@ -1,6 +1,6 @@
 .steps-section {
   @include border-radius(none);
-  padding: 2rem 10%;
+  padding: rem(32) 10%;
 
   &__title {
     font-weight: 700;
@@ -8,25 +8,24 @@
     word-break: break-all;
   }
 
-  @media (min-width: 744px) {
-    padding: 2rem 0px;
+  @media (min-width: #{$breakpoint-medium}) {
+    padding: rem(32) 0;
 
     &__title {
       padding-left: 12%;
       padding-bottom: rem(20);
     }
-
   }
 
-  @media (min-width: 996px) {
-    padding: 2rem 0;
+  @media (min-width: #{$breakpoint-large}) {
+    padding: rem(32) 0;
     max-width: 1250px;
     background: #5a00970f;
   }
 }
 
 .card-section {
-  padding: 2rem 10%;
+  padding: rem(32) 10%;
   padding-bottom: rem(65);
   @include background-color-gray(light);
 
@@ -44,8 +43,8 @@
     margin: auto;
   }
 
-  @media (min-width: 744px) {
-    padding: 2rem 0px;
+  @media (min-width: #{$breakpoint-medium}) {
+    padding: rem(32) 0;
 
     &__title {
       padding-left: 12%;
@@ -53,8 +52,8 @@
     }
   }
 
-  @media (min-width: 996px) {
-    padding: 2rem 0;
+  @media (min-width: #{$breakpoint-large}) {
+    padding: rem(32) 0;
     max-width: 1250px;
 
     &__container {
@@ -65,7 +64,6 @@
       justify-content: center;
       gap: rem(20);
       max-width: 1250px;
-
     }
   }
 }
@@ -76,7 +74,7 @@
   padding-top: rem(68);
   display: flex;
   align-items: baseline;
-  max-width: 550px;
+  max-width: rem(550);
   width: 100%;
   margin: -38px auto 0 auto;
   justify-content: center;
@@ -90,8 +88,8 @@
     margin-bottom: rem(29);
   }
 
-  @media (min-width: 996px) {
-    max-width: 800px;
+  @media (min-width: #{$breakpoint-large}) {
+    max-width: rem(800);
     margin: -38px 0 0 0;
 
     &__title {
@@ -105,8 +103,8 @@
   flex-direction: column;
   gap: rem(20);
   margin: 0 auto;
-  padding: 0 15px;
-  max-width: 550px;
+  padding: 0 rem(15);
+  max-width: rem(550);
   @include background-color-gray(light);
 
   &__title {
@@ -120,27 +118,23 @@
     padding: 0 0 rem(8) 0;
     margin-top: 0;
 
-    border-bottom: solid 4px $tertiary-color;
+    border-bottom: solid rem(4) $tertiary-color;
   }
 
   &__container {
-
     padding-top: rem(31);
-    padding-bottom: 67px;
-    gap: 18px;
+    padding-bottom: rem(67);
+    gap: rem(18);
     display: grid;
-
-
   }
 
-  @media (min-width: 996px) {
+  @media (min-width: #{$breakpoint-large}) {
     margin: unset;
-    padding: 0px 25px;
+    padding: 0 rem(25);
 
     &__wrapper {
       display: flex;
       flex-wrap: wrap;
-      // justify-content: center;
     }
   }
 }
@@ -149,6 +143,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: rem(800);
   margin: auto;
 }

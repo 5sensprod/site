@@ -1,12 +1,12 @@
 .footer {
     @include background-color-gray(dark);
     color: white;
-    padding: 2rem 10%;
+    padding: rem(32) 10%;
 
     &__logo_text {
         @include logo-text-style(18px);
         color: white;
-        margin-bottom: 1rem;
+        margin-bottom: rem(16);
     }
 
     &__list {
