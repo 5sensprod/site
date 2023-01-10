@@ -73,7 +73,7 @@
   @include background-color-gray(light);
   padding-top: rem(68);
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   max-width: rem(550);
   width: 100%;
   margin: -38px auto 0 auto;

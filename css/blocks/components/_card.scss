@@ -14,6 +14,7 @@ $card-heigth--restaurant: rem(250);
 
     &__content {
         padding: 5%;
+        margin-right: 17%;
     }
 
     img {
@@ -57,12 +58,12 @@ $card-heigth--restaurant: rem(250);
     .card {
         display: flex;
         flex-direction: row;
-        max-width: 420px;
-        height: 180px;
+        max-width: rem(420);
+        height: rem(180);
 
         img {
             @include border-radius(medium-left);
-            width: 270px;
+            width: rem(270);
             max-width: 70%;
             height: auto;
         }
@@ -70,8 +71,8 @@ $card-heigth--restaurant: rem(250);
         &__content {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            padding: 20px 5%;
+            gap: rem(8);
+            padding: rem(20) 5%;
             width: 50%;
         }
     }
@@ -118,13 +119,9 @@ $card-heigth--restaurant: rem(250);
 
         padding: rem(8) rem(15);
         z-index: 1;
-    }
 
-    @media (min-width: #{$breakpoint-small}) {
-        &::after {
-            right: 15px;
-            top: 15px;
-        }
+        right: rem(15);
+        top: rem(15);
     }
 
     @media (min-width: #{$breakpoint-medium}) {
@@ -132,16 +129,16 @@ $card-heigth--restaurant: rem(250);
         &::after {
             right: unset;
             top: unset;
-            left: 15px;
-            top: 15px;
+            left: rem(15);
+            top: rem(15);
         }
 
         @media (min-width: #{$breakpoint-large}) {
             &::after {
                 left: unset;
                 top: unset;
-                right: 15px;
-                top: 15px;
+                right: rem(15);
+                top: rem(15);
             }
         }
     }
@@ -150,8 +147,8 @@ $card-heigth--restaurant: rem(250);
 // COEUR
 .icon-heart {
     position: absolute;
-    bottom: 20px;
-    right: 15px;
+    bottom: rem(20);
+    right: rem(15);
     font-size: rem(24);
     color: #ff0000;
     z-index: 5;
@@ -163,15 +160,15 @@ $card-heigth--restaurant: rem(250);
 
 @media (min-width: #{$breakpoint-medium}) {
     .icon-heart {
-        right: 108px;
-        bottom: 15px;
+        right: rem(108);
+        bottom: rem(15);
     }
 }
 
 @media (min-width: #{$breakpoint-large}) {
     .icon-heart {
-        bottom: 20px;
-        right: 15px;
+        bottom: rem(20);
+        right: rem(15);
     }
 }
 
@@ -195,7 +192,7 @@ $card-heigth--restaurant: rem(250);
 
     &__name {
         font-weight: 700;
-        font-size: 18px;
+        font-size: rem(18);
         overflow: hidden;
         text-overflow: ellipsis;
         transition: all 0.3s ease;
@@ -224,7 +221,7 @@ $card-heigth--restaurant: rem(250);
 
     &__price {
         font-weight: 900;
-        font-size: 15px;
+        font-size: rem(15);
         margin-left: auto;
 
         display: flex;
@@ -237,7 +234,7 @@ $card-heigth--restaurant: rem(250);
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 61px;
+        width: rem(61);
         height: 100%;
         padding: rem(18);
         margin-right: -61px;
@@ -267,7 +264,7 @@ $card-heigth--restaurant: rem(250);
             margin-right: 0;
             transform: rotate(360deg);
         }
-    
+
         &:hover &__slide {
             margin-right: 0;
         }

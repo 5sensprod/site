@@ -15,11 +15,61 @@ body {
   font-size: 1.0625rem;
 }
 
+#heartGradient stop:nth-of-type(1) {
+  stop-color: #9356DC;
+}
+
+#heartGradient stop:nth-of-type(2) {
+  stop-color: #FF79DA;
+}
+
+.heart {
+  position: absolute;
+  fill: transparent;
+  stroke-width: 30;
+  cursor: pointer;
+  width: 1.2rem;
+  bottom: 50px;
+  right: 25px;
+}
+.heart svg {
+  overflow: visible;
+  width: 1.2rem;
+}
+.heart--page {
+  position: unset;
+  margin-right: 5%;
+  margin-top: 0.625rem;
+}
+
+.heart__main {
+  position: absolute;
+  stroke: transparent;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+}
+.heart__main:hover {
+  opacity: 1;
+  animation: stroke-animation 0.3s ease-in;
+}
+
+.heart__bg {
+  position: absolute;
+  stroke: #999;
+  fill: transparent;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+.heart__bg:hover {
+  opacity: 0;
+}
+
 @media (min-width: 996px) {
   .bloc_page {
     display: flex;
     flex-direction: column;
-    max-width: 1250px;
+    max-width: 78.125rem;
     margin: auto;
   }
 }
@@ -130,69 +180,26 @@ textarea:focus {
     transform: translateX(0);
   }
 }
-.icon-heart {
-  fill: transparent;
-  stroke-width: 30;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.2ms ease-in-out;
-}
-
-.icon-heart svg {
-  overflow: visible;
-  width: 1.2rem;
-}
-
-.icon-heart path {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 1550;
-  transform-origin: center;
-}
-
-.icon-heart .heart-background {
-  position: absolute;
-  stroke: #9356DC;
-  z-index: -1;
-  stroke: none;
-}
-
-.heart-main {
-  stroke: rgb(132, 132, 132);
-}
-
-.heart-main:hover {
-  stroke: #FF79DA;
-}
-
-.heart-main:hover path {
-  animation: stroke-animation 0.5s cubic-bezier(0.01, 0.88, 0.97, 0.13) forwards;
-}
 @keyframes stroke-animation {
   0% {
-    stroke: #9356DC;
-    stroke-dashoffset: 0;
+    transform: scale(1);
   }
   30% {
     stroke-dashoffset: 1550;
   }
   60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
     transform: scale(1);
   }
   80% {
-    fill: #9356DC;
-    transform: scale(1.1);
+    transform: scale(1.3);
   }
   90% {
     transform: scale(1);
   }
   100% {
     stroke-dashoffset: 3100;
-    fill: #FF79DA;
   }
 }
-
 .header__search {
   background-color: #EAEAEA;
 }
@@ -261,6 +268,7 @@ textarea:focus {
 }
 .card__content {
   padding: 5%;
+  margin-right: 17%;
 }
 .card img {
   border-radius: 0.625rem 0.625rem 0 0;
@@ -298,20 +306,20 @@ textarea:focus {
   .card {
     display: flex;
     flex-direction: row;
-    max-width: 420px;
-    height: 180px;
+    max-width: 26.25rem;
+    height: 11.25rem;
   }
   .card img {
     border-radius: 0.625rem 0 0 0.625rem;
-    width: 270px;
+    width: 16.875rem;
     max-width: 70%;
     height: auto;
   }
   .card__content {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 20px 5%;
+    gap: 0.5rem;
+    padding: 1.25rem 5%;
     width: 50%;
   }
 }
@@ -349,34 +357,30 @@ textarea:focus {
   border: solid 1px #30a789;
   padding: 0.5rem 0.9375rem;
   z-index: 1;
-}
-@media (min-width: 375px) {
-  .sticker::after {
-    right: 15px;
-    top: 15px;
-  }
+  right: 0.9375rem;
+  top: 0.9375rem;
 }
 @media (min-width: 744px) {
   .sticker::after {
     right: unset;
     top: unset;
-    left: 15px;
-    top: 15px;
+    left: 0.9375rem;
+    top: 0.9375rem;
   }
 }
 @media (min-width: 744px) and (min-width: 996px) {
   .sticker::after {
     left: unset;
     top: unset;
-    right: 15px;
-    top: 15px;
+    right: 0.9375rem;
+    top: 0.9375rem;
   }
 }
 
 .icon-heart {
   position: absolute;
-  bottom: 20px;
-  right: 15px;
+  bottom: 1.25rem;
+  right: 0.9375rem;
   font-size: 1.5rem;
   color: #ff0000;
   z-index: 5;
@@ -387,14 +391,14 @@ textarea:focus {
 
 @media (min-width: 744px) {
   .icon-heart {
-    right: 108px;
-    bottom: 15px;
+    right: 6.75rem;
+    bottom: 0.9375rem;
   }
 }
 @media (min-width: 996px) {
   .icon-heart {
-    bottom: 20px;
-    right: 15px;
+    bottom: 1.25rem;
+    right: 0.9375rem;
   }
 }
 .card-menu {
@@ -416,7 +420,7 @@ textarea:focus {
 }
 .card-menu__name {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all 0.3s ease;
@@ -439,7 +443,7 @@ textarea:focus {
 }
 .card-menu__price {
   font-weight: 900;
-  font-size: 15px;
+  font-size: 0.9375rem;
   margin-left: auto;
   display: flex;
   align-items: flex-end;
@@ -450,7 +454,7 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 61px;
+  width: 3.8125rem;
   height: 100%;
   padding: 1.125rem;
   margin-right: -61px;
@@ -811,7 +815,7 @@ textarea:focus {
   background-color: #F7F7F7;
   padding-top: 4.25rem;
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   max-width: 34.375rem;
   width: 100%;
   margin: -38px auto 0 auto;

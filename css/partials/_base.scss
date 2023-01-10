@@ -16,11 +16,70 @@ body {
     font-size: rem(17);
 }
 
+// ICONE COEUR
+
+#heartGradient stop:nth-of-type(1) {
+    stop-color: $primary-color;
+}
+
+#heartGradient stop:nth-of-type(2) {
+    stop-color: $secondary-color;
+}
+
+$gray: #999;
+
+.heart {
+    position: absolute;
+    fill: transparent;
+    stroke-width: 30;
+    cursor: pointer;
+    width: 1.2rem;
+    bottom: 50px;
+    right: 25px;
+
+    & svg {
+        overflow: visible;
+        width: 1.2rem;
+    }
+
+    &--page {
+        position: unset;
+        margin-right: 5%;
+        margin-top: rem(10);
+    }
+}
+
+.heart__main {
+    position: absolute;
+    stroke: transparent;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+
+    &:hover {
+        opacity: 1;
+        animation: stroke-animation .3s ease-in;
+    }
+}
+
+.heart__bg {
+    position: absolute;
+    stroke: $gray;
+    fill: transparent;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+
+    &:hover {
+        opacity: 0;
+    }
+}
+
+// BLOC PAGE desktop
 @media (min-width: #{$breakpoint-large}) {
     .bloc_page {
         display: flex;
         flex-direction: column;
-        max-width: 1250px;
+        max-width: rem(1250);
         margin: auto;
     }
 }
